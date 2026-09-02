@@ -19,23 +19,7 @@
 One app, one backend, one website — designed together so each can stay small.<br>
 <sub>一个 app、一套后端、一个官网，三件事一起设计，各自才能保持精简。</sub>
 
-```mermaid
-flowchart LR
-    subgraph device["📱 Android"]
-        app["<b>Pixiv-Shaft</b><br/>Kotlin · Material You"]
-    end
-    subgraph cloud["☁️ pixshaft.com"]
-        api["<b>pixshaft-api</b><br/>Hono · SQLite<br/>sync · config · plans"]
-        events["<b>shaft-api-v2</b><br/>Hono · WebSocket<br/>events · trending"]
-        web["<b>shaft-web</b><br/>Next.js · React<br/>landing · web discover"]
-    end
-    pixiv[("pixiv.net<br/>official API")]
-
-    app -- "signed REST" --> api
-    app -- "REST / WS" --> events
-    app -- "direct" --> pixiv
-    web -. "guestbook" .-> api
-```
+<img src="https://raw.githubusercontent.com/SoxiaLiSA/SoxiaLiSA/main/assets/stack.svg" width="100%" alt="How the Shaft stack fits together: Pixiv-Shaft talks to pixiv directly, and to pixshaft-api (signed REST) and shaft-api-v2 (REST/WebSocket) on pixshaft.com; shaft-web serves the site and feeds the guestbook into pixshaft-api.">
 
 <table>
 <tr>

@@ -354,9 +354,59 @@ def cta() -> str:
     return s
 
 
+# ───────────────────────────── architecture ─────────────────────────────
+
+def node(x, y, w, h, emoji, title, note, color, prefix):
+    return f"""<g>
+  <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="18" fill="#14122a" fill-opacity=".85" stroke="#ffffff" stroke-opacity=".12"/>
+  <rect x="{x}" y="{y+16}" width="4" height="{h-32}" rx="2" fill="{color}"/>
+  <text x="{x+24}" y="{y+h/2+10}" font-family="{FONT}" font-size="26">{emoji}</text>
+  <text x="{x+66}" y="{y+h/2-4}" font-family="{FONT}" font-size="21" font-weight="800" fill="#ffffff">{title}</text>
+  <text x="{x+66}" y="{y+h/2+18}" font-family="{FONT}" font-size="13" fill="#ffffff" fill-opacity=".62">{note}</text>
+</g>"""
+
+
+def flow(path, color, label, lx, ly, dotted=False, dur="2.6s"):
+    """An edge: soft base stroke, animated dash, a travelling dot, and a pill label."""
+    dash = "3 7" if dotted else "8 10"
+    out = (f'<path d="{path}" fill="none" stroke="{color}" stroke-opacity=".22" stroke-width="2.5"/>'
+           f'<path d="{path}" fill="none" stroke="{color}" stroke-opacity=".9" stroke-width="2" stroke-dasharray="{dash}">'
+           f'<animate attributeName="stroke-dashoffset" from="0" to="-72" dur="{dur}" repeatCount="indefinite"/></path>'
+           f'<circle r="4.5" fill="{color}"><animateMotion dur="{dur}" repeatCount="indefinite" path="{path}"/></circle>'
+           f'<circle r="9" fill="{color}" fill-opacity=".25"><animateMotion dur="{dur}" repeatCount="indefinite" path="{path}"/></circle>')
+    w = text_width(label, 12.5, 700) + 26
+    out += (f'<rect x="{lx-w/2:.1f}" y="{ly-13}" width="{w:.1f}" height="26" rx="13" fill="{INK}" fill-opacity=".92" stroke="{color}" stroke-opacity=".45"/>'
+            f'<text x="{lx}" y="{ly+4.5}" text-anchor="middle" font-family="{FONT}" font-size="12.5" font-weight="700" fill="{color}">{label}</text>')
+    return out
+
+
+def stack() -> str:
+    W, H, P = 1000, 470, "st"
+    s = panel_open(P, W, H, "How the Shaft stack fits together", rx=26, scale=.55)
+    # cloud group
+    s += (f'<rect x="510" y="34" width="444" height="402" rx="24" fill="#ffffff" fill-opacity=".035" stroke="#ffffff" stroke-opacity=".10"/>'
+          f'<text x="700" y="66" text-anchor="middle" font-family="{FONT}" font-size="14" font-weight="700" fill="#ffffff" fill-opacity=".7">☁️  pixshaft.com  ·  one box, Caddy in front</text>')
+    s += node(536, 92, 324, 82, "☁️", "pixshaft-api", "Hono · SQLite · sync · config · plans", ACCENT, P)
+    s += node(536, 202, 324, 82, "📡", "shaft-api-v2", "Hono · WebSocket · events · trending", GLOW, P)
+    s += node(536, 312, 324, 82, "🌐", "shaft-web", "Next.js 16 · landing · /web discover", PINK, P)
+    # device + pixiv
+    s += (f'<text x="60" y="66" font-family="{FONT}" font-size="14" font-weight="700" fill="#ffffff" fill-opacity=".7">📱  Android</text>')
+    s += node(46, 92, 300, 82, "📱", "Pixiv-Shaft", "Kotlin · Material You · the client", BRAND, P)
+    s += (f'<text x="60" y="326" font-family="{FONT}" font-size="14" font-weight="700" fill="#ffffff" fill-opacity=".7">🎨  upstream</text>')
+    s += node(46, 352, 300, 82, "🎨", "pixiv.net", "official app API · content comes from here", AMBER, P)
+    # flows
+    s += flow("M346 120 C 445 120, 445 133, 536 133", ACCENT, "signed REST", 441, 104)
+    s += flow("M346 150 C 445 150, 445 243, 536 243", GLOW, "REST · WebSocket", 441, 208, dur="3s")
+    s += flow("M196 174 L 196 352", AMBER, "direct · no proxy", 196, 262, dur="2.2s")
+    s += flow("M860 332 C 926 310, 926 190, 860 158", PINK, "guestbook", 907, 246, dotted=True, dur="3.4s")
+    s += panel_close(W, H, rx=26)
+    return s
+
+
 def main() -> None:
     files = {
         "hero.svg": hero(),
+        "stack.svg": stack(),
         "marquee.svg": marquee(),
         "h-stack.svg": header("hs", "The Shaft", "stack", "One app, one backend, one website — designed together so each can stay small.", "stack"),
         "h-bench.svg": header("hb", "Also on the", "bench", "Smaller things that fell out of building Shaft.", "bench"),
