@@ -1,10 +1,7 @@
 <div align="center">
 
-<a href="https://pixshaft.com"><img src="https://raw.githubusercontent.com/CeuiLiSA/Pixiv-Shaft/classic/snap/pixshaft/shaft-logo.png" width="96" alt="Shaft logo"></a>
+<a href="https://pixshaft.com"><img src="https://raw.githubusercontent.com/SoxiaLiSA/SoxiaLiSA/main/assets/hero.svg" width="100%" alt="Ikura — I build Shaft: the whole of Pixiv, in your pocket."></a>
 
-# Ikura
-
-**I build [Shaft](https://pixshaft.com) — an open-source Pixiv client for Android — and everything around it.**<br>
 <sub>在做 Shaft：一个开源的 Pixiv 第三方安卓客户端，以及它背后的云端服务与官网。</sub>
 
 [![Website](https://img.shields.io/badge/pixshaft.com-7c5cff?style=for-the-badge&logo=googlechrome&logoColor=white)](https://pixshaft.com)
@@ -13,7 +10,6 @@
 [![Release](https://img.shields.io/github/v/release/CeuiLiSA/Pixiv-Shaft?style=for-the-badge&logo=android&color=3ddc84&label=latest)](https://github.com/CeuiLiSA/Pixiv-Shaft/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/CeuiLiSA/Pixiv-Shaft/total?style=for-the-badge&color=e74c3c)](https://github.com/CeuiLiSA/Pixiv-Shaft/releases)
 
-<sub>📍 Tokyo &nbsp;·&nbsp; ずっと真夜中でいいのに</sub>
 
 </div>
 
