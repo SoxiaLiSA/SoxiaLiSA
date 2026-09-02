@@ -362,7 +362,7 @@ def node(x, y, w, h, emoji, title, note, color, prefix):
   <rect x="{x}" y="{y+16}" width="4" height="{h-32}" rx="2" fill="{color}"/>
   <text x="{x+24}" y="{y+h/2+10}" font-family="{FONT}" font-size="26">{emoji}</text>
   <text x="{x+66}" y="{y+h/2-4}" font-family="{FONT}" font-size="21" font-weight="800" fill="#ffffff">{title}</text>
-  <text x="{x+66}" y="{y+h/2+18}" font-family="{FONT}" font-size="13" fill="#ffffff" fill-opacity=".62">{note}</text>
+  <text x="{x+66}" y="{y+h/2+18}" font-family="{FONT}" font-size="12.5" fill="#ffffff" fill-opacity=".62">{note}</text>
 </g>"""
 
 
@@ -386,14 +386,14 @@ def stack() -> str:
     # cloud group
     s += (f'<rect x="510" y="34" width="444" height="402" rx="24" fill="#ffffff" fill-opacity=".035" stroke="#ffffff" stroke-opacity=".10"/>'
           f'<text x="700" y="66" text-anchor="middle" font-family="{FONT}" font-size="14" font-weight="700" fill="#ffffff" fill-opacity=".7">☁️  pixshaft.com  ·  one box, Caddy in front</text>')
-    s += node(536, 92, 324, 82, "☁️", "pixshaft-api", "Hono · SQLite · sync · config · plans", ACCENT, P)
-    s += node(536, 202, 324, 82, "📡", "shaft-api-v2", "Hono · WebSocket · events · trending", GLOW, P)
-    s += node(536, 312, 324, 82, "🌐", "shaft-web", "Next.js 16 · landing · /web discover", PINK, P)
+    s += node(536, 92, 324, 82, "☁️", "pixshaft-api", "Hono · SQLite · sync · plans", ACCENT, P)
+    s += node(536, 202, 324, 82, "📡", "shaft-api-v2", "Hono · WS · events · trending", GLOW, P)
+    s += node(536, 312, 324, 82, "🌐", "shaft-web", "Next.js 16 · landing · /web", PINK, P)
     # device + pixiv
     s += (f'<text x="60" y="66" font-family="{FONT}" font-size="14" font-weight="700" fill="#ffffff" fill-opacity=".7">📱  Android</text>')
-    s += node(46, 92, 300, 82, "📱", "Pixiv-Shaft", "Kotlin · Material You · the client", BRAND, P)
+    s += node(46, 92, 300, 82, "📱", "Pixiv-Shaft", "Kotlin · Material You", BRAND, P)
     s += (f'<text x="60" y="326" font-family="{FONT}" font-size="14" font-weight="700" fill="#ffffff" fill-opacity=".7">🎨  upstream</text>')
-    s += node(46, 352, 300, 82, "🎨", "pixiv.net", "official app API · content comes from here", AMBER, P)
+    s += node(46, 352, 300, 82, "🎨", "pixiv.net", "official API · the content", AMBER, P)
     # flows
     s += flow("M346 120 C 445 120, 445 133, 536 133", ACCENT, "signed REST", 441, 104)
     s += flow("M346 150 C 445 150, 445 243, 536 243", GLOW, "REST · WebSocket", 441, 208, dur="3s")
