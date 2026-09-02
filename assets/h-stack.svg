@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="118" viewBox="0 0 1200 118" role="img" aria-label="The Shaft stack">
+<title>The Shaft stack</title>
+<defs>
+  <linearGradient id="hs-brand" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#7c6cff"/><stop offset="1" stop-color="#5b6ee1"/>
+  </linearGradient>
+  <linearGradient id="hs-text" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#d9d4ff"/><stop offset="1" stop-color="#22d3ee"/>
+    <animate attributeName="x1" values="-0.6;0.4;-0.6" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="0.7;1.7;0.7" dur="7s" repeatCount="indefinite"/>
+  </linearGradient>
+  <radialGradient id="hs-a1" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#7c6cff" stop-opacity=".75"/><stop offset="1" stop-color="#7c6cff" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="hs-a2" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#22d3ee" stop-opacity=".45"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="hs-a3" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#f6339a" stop-opacity=".35"/><stop offset="1" stop-color="#f6339a" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="hs-grain" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" stitchTiles="stitch"/>
+    <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .06 0"/>
+  </filter>
+  <filter id="hs-blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
+  <pattern id="hs-grid" width="26" height="26" patternUnits="userSpaceOnUse">
+    <circle cx="1" cy="1" r="1" fill="#ffffff" fill-opacity=".07"/>
+  </pattern>
+
+  <clipPath id="hs-clip"><rect width="1200" height="118" rx="24"/></clipPath>
+</defs>
+<g clip-path="url(#hs-clip)">
+  <rect width="1200" height="118" rx="24" fill="#07060f"/>
+  
+  <g filter="url(#hs-blur)" opacity=".9">
+    <circle cx="264" cy="12" r="189" fill="url(#hs-a1)">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 60 30; -30 20; 0 0" dur="18s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="984" cy="30" r="135" fill="url(#hs-a2)">
+      <animateTransform attributeName="transform" type="translate" values="0 0; -50 40; 20 -30; 0 0" dur="22s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="720" cy="112" r="126" fill="url(#hs-a3)">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 40 -40; -40 10; 0 0" dur="26s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <rect width="1200" height="118" fill="url(#hs-grid)"/>
+  <rect width="1200" height="118" filter="url(#hs-grain)" opacity=".6"/>
+
+<text x="40" y="58" font-family="Inter, Sora, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="30" font-weight="800" letter-spacing="-0.5" fill="#ffffff">The Shaft <tspan fill="url(#hs-text)">stack</tspan></text><text x="40" y="90" font-family="Inter, Sora, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="15" fill="#ffffff" fill-opacity=".62">One app, one backend, one website — designed together so each can stay small.</text></g>
+<rect x=".5" y=".5" width="1199" height="117" rx="24" fill="none" stroke="#ffffff" stroke-opacity=".10"/>
+</svg>
