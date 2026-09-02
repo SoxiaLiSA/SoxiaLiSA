@@ -8,6 +8,7 @@
 [![Release](https://img.shields.io/github/v/release/CeuiLiSA/Pixiv-Shaft?style=for-the-badge&logo=android&color=3ddc84&labelColor=07060f&label=latest)](https://github.com/CeuiLiSA/Pixiv-Shaft/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/CeuiLiSA/Pixiv-Shaft/total?style=for-the-badge&color=7c6cff&labelColor=07060f)](https://github.com/CeuiLiSA/Pixiv-Shaft/releases)
 [![Google Play](https://img.shields.io/badge/Google_Play-PixShaft-22d3ee?style=for-the-badge&logo=googleplay&logoColor=white&labelColor=07060f)](https://play.google.com/store/apps/details?id=ceui.pixiv.pshaft)
+[![Website](https://img.shields.io/badge/pixshaft.com-f6339a?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=07060f)](https://pixshaft.com)
 
 </div>
 
