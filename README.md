@@ -1,8 +1,8 @@
 <div align="center">
 
-<a href="https://pixshaft.com"><img src="https://raw.githubusercontent.com/CeuiLiSA/Pixiv-Shaft/classic/snap/pixshaft/shaft-logo.png" width="96" alt="Shaft logo"></a>
+<a href="https://pixshaft.com"><img src="https://raw.githubusercontent.com/SoxiaLiSA/SoxiaLiSA/main/assets/shaft-logo-rounded.png" width="96" alt="Shaft logo"></a>
 
-# Ikura
+# Pixiv-Shaft
 
 **I build [Shaft](https://pixshaft.com) — an open-source Pixiv client for Android — and everything around it.**<br>
 <sub>在做 Shaft：一个开源的 Pixiv 第三方安卓客户端，以及它背后的云端服务与官网。</sub>

@@ -404,39 +404,8 @@ def stack() -> str:
 
 
 def main() -> None:
-    files = {
-        "hero.svg": hero(),
-        "stack.svg": stack(),
-        "marquee.svg": marquee(),
-        "h-stack.svg": header("hs", "The Shaft", "stack", "One app on pixiv's official API, two backends of my own, one website — designed together so each can stay small.", "stack"),
-        "h-bench.svg": header("hb", "Also on the", "bench", "Smaller things that fell out of building Shaft.", "bench"),
-        "h-toolbox.svg": header("ht", "Under the", "hood", "What the three of them are made of.", "toolbox"),
-        "card-app.svg": card("ca", "📱", "Pixiv-Shaft", "The client · Android",
-                             ["Illustrations, manga, novels, rankings,", "FANBOX and pixiv COMIC in one app.",
-                              "On-device AI: super-resolution, cut-out,", "manga translation, RIFE ugoira frames."],
-                             ["Kotlin", "Coroutines", "Room", "Retrofit", "Glide", "ONNX Runtime", "C++ / JNI"],
-                             BRAND, "github.com/CeuiLiSA/Pixiv-Shaft"),
-        "card-api.svg": card("cb", "☁️", "pixshaft-api", "The backend · pixshaft.com",
-                             ["Cloud sync for settings, mute lists and", "download config · browse history · remote",
-                              "config and in-app push · plans with automatic", "Afdian fulfilment · curated Prime shelves."],
-                             ["Node 22", "Hono", "better-sqlite3", "pino", "pm2", "Caddy", "HMAC"],
-                             ACCENT, "live at pixshaft.com", lock=True),
-        "card-web.svg": card("cc", "🌐", "shaft-web", "The website · pixshaft.com",
-                             ["A motion-heavy landing page: bento features,", "showcase, pricing, FAQ, guestbook —",
-                              "plus a web discover page at /web with", "switchable skins and a login flow."],
-                             ["Next.js 16", "React 19", "TypeScript", "Tailwind v4", "motion", "GSAP", "Lenis"],
-                             PINK, "pixshaft.com · /web", lock=True),
-        "bench-stackswipe.svg": small_card("b1", "StackSwipe",
-                                           ["iOS-style app switcher for Jetpack", "Compose, physics-based animations."],
-                                           ["Compose", "Kotlin"], BRAND),
-        "bench-login.svg": small_card("b2", "pixiv-login",
-                                      ["Android library for Pixiv OAuth 2.0", "login (PKCE). One dependency via JitPack."],
-                                      ["Kotlin", "OAuth · PKCE", "JitPack"], ACCENT),
-        "bench-shaft-ios.svg": small_card("b3", "Shaft · SwiftUI",
-                                          ["A SwiftUI prototype: discover feed, detail,", "token refresh. Full iOS client in progress."],
-                                          ["Swift", "SwiftUI"], PINK),
-        "cta.svg": cta(),
-    }
+    # Only stack.svg is referenced by README.md today; the other builders stay around for reuse.
+    files = {"stack.svg": stack()}
     for name, svg in files.items():
         (OUT / name).write_text(svg, encoding="utf-8")
         print(f"wrote assets/{name} ({len(svg)//1024} KB)")
