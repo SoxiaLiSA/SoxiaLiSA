@@ -21,8 +21,8 @@
 
 ## 🧩 The Shaft stack
 
-One app, one backend, one website — designed together so each can stay small.<br>
-<sub>一个 app、一套后端、一个官网，三件事一起设计，各自才能保持精简。</sub>
+One app on top of pixiv's official API, two backends of my own behind it, and one website — designed together so each can stay small.<br>
+<sub>一个 app 直连 pixiv 官方后端，背后再加两个自建后端（pixshaft-api / shaft-api-v2）和一个官网，一起设计，各自才能保持精简。</sub>
 
 <img src="https://raw.githubusercontent.com/SoxiaLiSA/SoxiaLiSA/main/assets/stack.svg" width="100%" alt="How the Shaft stack fits together: Pixiv-Shaft talks to pixiv directly, and to pixshaft-api (signed REST) and shaft-api-v2 (REST/WebSocket) on pixshaft.com; shaft-web serves the site and feeds the guestbook into pixshaft-api.">
 

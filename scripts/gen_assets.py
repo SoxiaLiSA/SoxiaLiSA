@@ -408,7 +408,7 @@ def main() -> None:
         "hero.svg": hero(),
         "stack.svg": stack(),
         "marquee.svg": marquee(),
-        "h-stack.svg": header("hs", "The Shaft", "stack", "One app, one backend, one website — designed together so each can stay small.", "stack"),
+        "h-stack.svg": header("hs", "The Shaft", "stack", "One app on pixiv's official API, two backends of my own, one website — designed together so each can stay small.", "stack"),
         "h-bench.svg": header("hb", "Also on the", "bench", "Smaller things that fell out of building Shaft.", "bench"),
         "h-toolbox.svg": header("ht", "Under the", "hood", "What the three of them are made of.", "toolbox"),
         "card-app.svg": card("ca", "📱", "Pixiv-Shaft", "The client · Android",
