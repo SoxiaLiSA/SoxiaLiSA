@@ -4,7 +4,6 @@
 
 <sub>在做 Shaft：一个开源的 Pixiv 第三方安卓客户端，以及它背后的云端服务与官网。</sub>
 
-[![Website](https://img.shields.io/badge/pixshaft.com-7c5cff?style=for-the-badge&logo=googlechrome&logoColor=white)](https://pixshaft.com)
 [![Google Play](https://img.shields.io/badge/Google_Play-PixShaft-3ddc84?style=for-the-badge&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=ceui.pixiv.pshaft)
 [![Stars](https://img.shields.io/github/stars/CeuiLiSA/Pixiv-Shaft?style=for-the-badge&logo=github&color=f5c842&label=Pixiv-Shaft)](https://github.com/CeuiLiSA/Pixiv-Shaft)
 [![Release](https://img.shields.io/github/v/release/CeuiLiSA/Pixiv-Shaft?style=for-the-badge&logo=android&color=3ddc84&label=latest)](https://github.com/CeuiLiSA/Pixiv-Shaft/releases/latest)
